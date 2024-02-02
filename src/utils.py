@@ -1,8 +1,12 @@
 import requests
-from _datetime import datetime
+from datetime import datetime
 
 
-def get_json(user_val):
+def get_json(user_val: str) -> dict:
+    """
+    Получаем информацию о валюте из вебсайта, записываем нужную информацию в словарь
+    """
+
     name = "https://www.cbr-xml-daily.ru/daily_json.js"
     dict_currency = {}
 
